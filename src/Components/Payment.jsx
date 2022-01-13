@@ -36,7 +36,7 @@ function Payment({location}) {
           token : token
         });
         
-        axios.post("/api/payment",url)
+        axios.post("https://glacial-peak-47541.herokuapp.com/api/payment",url)
         .then(({data})=>{
           if(data!=="Out of Stock")
           {

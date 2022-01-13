@@ -20,7 +20,7 @@ function Search({location}) {
             try
             {
                 setLoading(true);
-                const {data} = await axios.get(`/api/products/query/${search}`);
+                const {data} = await axios.get(`https://glacial-peak-47541.herokuapp.com/api/products/query/${search}`);
                 setLoading(false);
                 setProducts(data);
             }

@@ -33,7 +33,7 @@ function Signup() {
 
         const url = new URLSearchParams(body);
 
-        axios.post("/api/signup",url)
+        axios.post("https://glacial-peak-47541.herokuapp.com/api/signup",url)
         .then(({data})=>{
             setLoading(false);
             localStorage.setItem('token',data);

@@ -16,7 +16,7 @@ function Navigation() {
         const token = localStorage.getItem('token');
         if(token){
             const url = new URLSearchParams({token:token});
-            axios.post("/api/verify",url)
+            axios.post("https://glacial-peak-47541.herokuapp.com/api/verify",url)
             .then(({data})=>{
                 setUser(data);
             })

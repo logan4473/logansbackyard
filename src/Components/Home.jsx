@@ -18,7 +18,7 @@ function Home() {
             try
             {
                 setLoading(true);
-                const {data} = await axios.get('/api/products');
+                const {data} = await axios.get('https://glacial-peak-47541.herokuapp.com/api/products');
                 setLoading(false);
                 setProducts(data);
             }

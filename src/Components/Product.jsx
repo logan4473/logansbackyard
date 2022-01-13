@@ -25,8 +25,8 @@ function Product(props) {
             try
             {
                 setLoading(true);
-                const {data} = await axios.get(`/api/product/${ID}`);
-                const similar = await axios.get(`/api/products/query/?Category=${data.Category}`);
+                const {data} = await axios.get(`https://glacial-peak-47541.herokuapp.com/api/product/${ID}`);
+                const similar = await axios.get(`https://glacial-peak-47541.herokuapp.com/api/products/query/?Category=${data.Category}`);
                 setLoading(false);
                 setProduct(data);
                 setProducts(similar.data.filter((prod)=>(prod._id!==data._id)))
@@ -49,7 +49,7 @@ function Product(props) {
         if(token){
             const url = new URLSearchParams({token:token});
             setLoading(true);
-            axios.post("/api/verify",url)
+            axios.post("https://glacial-peak-47541.herokuapp.com/api/verify",url)
             .then((User)=>{
                 setUser(User.data);
                 User.data.cart.includes(ID)?setincart(true):setincart(false);    
@@ -83,7 +83,7 @@ function Product(props) {
                 url.append("array",val);
             })
 
-            axios.post("/api/cart/update",url)
+            axios.post("https://glacial-peak-47541.herokuapp.com/api/cart/update",url)
             .then(({data})=>{
                 console.log(data);
                 localStorage.setItem('token',data);

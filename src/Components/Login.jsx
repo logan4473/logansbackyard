@@ -24,7 +24,7 @@ function Login() {
         event.preventDefault();
         const url = new URLSearchParams({mobile : event.target.mobile.value, password : event.target.password.value});
         setLoading(true)
-        axios.post("/api/login",url)
+        axios.post("https://glacial-peak-47541.herokuapp.com/api/login",url)
         .then(({data})=>{
             localStorage.setItem('token',data);
         })
