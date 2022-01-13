@@ -50,7 +50,7 @@ function Cart() {
           url.append("array",val);
         })
 
-        axios.post("/api/cart/",url)
+        axios.post("https://glacial-peak-47541.herokuapp.com/api/cart/",url)
         .then((products)=>{
           setproduct(products.data);
           setTotal(products.data.map((items)=>(items.Price)).reduce((a,b)=>(a+b)));
