@@ -85,7 +85,6 @@ function Product(props) {
 
             axios.post("https://glacial-peak-47541.herokuapp.com/api/cart/update",url)
             .then(({data})=>{
-                console.log(data);
                 localStorage.setItem('token',data);
             })
             .catch((err)=>{

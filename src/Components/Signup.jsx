@@ -22,7 +22,6 @@ function Signup() {
     const handleSubmit = (event)=>{
         event.preventDefault();
         setLoading(true)
-        console.log(JSON.stringify(err)===JSON.stringify(edefault))
 
         const body = {
             firstName : event.target.firstName.value,

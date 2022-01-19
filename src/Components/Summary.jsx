@@ -10,8 +10,6 @@ function Summary({location}) {
     const orders = location.orders?location.orders:history.push('/');
     const success = location.success?location.success:history.push('/');
 
-    console.log(orders);
-    console.log(success);
 
     return (
         <>
